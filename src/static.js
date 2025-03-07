@@ -3,8 +3,8 @@ import { SlPaypal } from "react-icons/sl";
 
 export const chip = "/assets/Chip_Card.svg";
 export const chip_2 = "/assets/Chip_Card_2.svg";
-export const BASE_URL = "http://inertia-pos.manirul.xyz/api/";
-export const BASE_IMAGE_URL = "http://inertia-pos.manirul.xyz/";
+export const BASE_URL = "https://inertia-pos.manirul.xyz/api/";
+export const BASE_IMAGE_URL = "https://inertia-pos.manirul.xyz/";
 
 export const transactions_icons = [
   {
