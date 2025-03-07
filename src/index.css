@@ -1,0 +1,65 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&display=swap");
+@import "tailwindcss";
+
+@theme {
+  --font-inter: "Inter", sans-serif;
+  --font-lato: "Lato", sans-serif;
+}
+
+body {
+  font-family: var(--font-inter);
+}
+
+.topbar-min-h {
+  @apply md:min-h-[101px] min-h-[74px];
+}
+
+.sidebar-menu-item {
+  @apply relative min-h-[62px] flex items-center text-[#b1b1b1] text-[18px];
+}
+
+.sidebar-menu-item.active,
+.sidebar-menu-item:hover {
+  @apply text-[#2d60ff];
+}
+
+.sidebar-menu-item:not(.active):hover {
+  @apply text-[#5780ff] opacity-80;
+}
+
+.sidebar-menu-item img {
+  @apply px-[26px] ml-[18px];
+  filter: invert(76%) sepia(4%) saturate(10%) hue-rotate(358deg) brightness(95%)
+    contrast(86%);
+}
+
+.sidebar-menu-item.active img,
+.sidebar-menu-item:hover img {
+  filter: invert(29%) sepia(53%) saturate(3471%) hue-rotate(220deg)
+    brightness(99%) contrast(104%);
+}
+
+.sidebar-menu-item.active::before {
+  @apply content-[''] absolute left-[-6px] top-0 w-[12px] h-full bg-[#2d60ff] rounded-full;
+}
+
+.topbar-icon {
+  @apply hidden md:flex items-center justify-center w-[50px] h-[50px] bg-[#f5f7fa] rounded-full hover:bg-[#f1f1f1];
+}
+
+input.search::placeholder {
+  color: #718ebf;
+}
+
+.header-area {
+  @apply flex items-center justify-between min-h-[65px] mt-[5px];
+}
+
+.header-area h2 {
+  @apply text-[#343C6A] text-[22px] font-semibold tracking-wide;
+}
+
+.rounded-card {
+  @apply bg-white rounded-[24px] flex items-center justify-center overflow-hidden;
+}
